@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageAjouterComposantAuMedicament">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Quelle composant voulez-vous ajoutez ?"></Label>
+            <Picker x:Name="pickerComposant" ItemDisplayBinding="{Binding LibelleComposant}" SelectedItem="{Binding IdComposant}"></Picker>
+            
+            <Entry x:Name="txtQuantiteComposant"></Entry>
+            <Button x:Name="btnAjouterComposantAuMedicament" Clicked="BtnAjouterComposantAuMedicament_Clicked" Text="Ajouter le composant"></Button>
+
+            <Button x:Name="btnRetourAcceuil" Text="Retour à la page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

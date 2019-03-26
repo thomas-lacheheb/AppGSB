@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppGSB"
+             x:Class="AppGSB.MainPage">
+
+    <StackLayout>
+        <Label HorizontalTextAlignment="Center">Gestion des composants et des présentations des médicaments</Label>
+
+        <Button Text="Gérer les composants" x:Name="btnGestionComposants" Clicked="BtnGestionComposants_Clicked"></Button>
+        <Button Text="Gérer les médicaments" x:Name="btnGestionMedicaments" Clicked="BtnGestionMedicaments_Clicked"></Button>
+        <Button Text="Gérer les formulation des médicaments" x:Name="btnGestionFormulation" Clicked="BtnGestionFormulation_Clicked"></Button>
+        <Button Text="Statistiques" x:Name="btnStatistiques" Clicked="BtnStatistiques_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

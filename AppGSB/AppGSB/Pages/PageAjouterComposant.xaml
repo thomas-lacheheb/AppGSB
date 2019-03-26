@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageAjouterComposant">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Identifiant du composant"></Label>
+            <Entry x:Name="txtIdComposant" IsEnabled="False"></Entry>
+
+            <Label Text="Nom du composant"></Label>
+            <Entry x:Name="txtLibelleComposant"></Entry>
+
+            <Button x:Name="btnAjouterLeComposant" Text="Valider" Clicked="BtnAjouterLeComposant_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageAjouterFormulationAuMedicament">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ajouter une formulation au médicament : "></Label>
+            <Picker x:Name="pickerPresentation" ItemDisplayBinding="{Binding LibellePresentation}" SelectedItem="{Binding IdPresentation}"></Picker>
+
+            <Button x:Name="btnAjouterLaFormulationAuMedicament" Text="Valider" Clicked="BtnAjouterLaFormulationAuMedicament_Clicked"></Button>
+
+            <Button x:Name="btnRetourAcceuil" Text="Retour à la page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

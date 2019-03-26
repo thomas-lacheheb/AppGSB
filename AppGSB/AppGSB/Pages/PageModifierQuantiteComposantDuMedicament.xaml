@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageModifierQuantiteComposantDuMedicament">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modifier la quantité de ce composant pour le médicament sélectionné :"></Label>
+            
+            <Label Text="Nom du composant"></Label>
+            <Entry x:Name="txtLibelleComposant" IsEnabled="False"></Entry>
+
+            <Label Text="Quantité du composant dans le médicament"></Label>
+            <Entry x:Name="txtQteComposant"></Entry>
+
+            <Button x:Name="btnValiderModificationQteComposant" Text="Valider la modification" Clicked="BtnValiderModificationQteComposant_Clicked"></Button>
+
+            <Button x:Name="btnRetourAcceuil" Text="Retour à la page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

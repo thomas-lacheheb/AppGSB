@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageFormulationDuMedicament">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Voici les formulation du médicament : "></Label>
+            
+            <ListView x:Name="lvFormulationDuMedicament">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="200" Text="{Binding LibellePresentation}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnAjouterFormulation" Text="Ajouter une formulation au médicament" Clicked="BtnAjouterFormulation_Clicked"></Button>
+            <Button x:Name="btnRetourAcceuil" Text="Retour à la page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

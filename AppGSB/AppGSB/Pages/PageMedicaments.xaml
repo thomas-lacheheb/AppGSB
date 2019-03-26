@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageMedicaments">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center" Text="Gestion des composants des médicaments"></Label>
+
+            <ListView x:Name="lvMedicaments" HorizontalOptions="Center" WidthRequest="400" ItemSelected="LvMedicaments_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding IdMedicament}" HorizontalTextAlignment="Center"></Label>
+                                    <Label WidthRequest="100" Text="{Binding LibelleMedicament}"></Label>
+                                    <Label WidthRequest="100" Text="{Binding CodeMedicament}"></Label>
+                                    <Label WidthRequest="100" Text="{Binding PrixMedicament}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnRetourAcceuil" Text="Page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

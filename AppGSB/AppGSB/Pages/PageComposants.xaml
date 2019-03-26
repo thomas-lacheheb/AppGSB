@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageComposants">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalTextAlignment="Center" Text="Gestion des composants"></Label>
+
+            <ListView x:Name="lvComposants" ItemSelected="LvComposants_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding IdComposant}" HorizontalTextAlignment="Center"></Label>
+                                    <Label WidthRequest="100" Text="{Binding LibelleComposant}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Insérer un nouveau composant" WidthRequest="200" x:Name="btnAjouterComposant" Clicked="BtnAjouterComposant_Clicked"></Button>
+            <Button Text="Page d'acceuil" x:Name="btnRetourAcceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

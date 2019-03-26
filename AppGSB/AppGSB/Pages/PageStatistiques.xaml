@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageStatistiques">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombre de composants par médicament :"></Label>
+            <ListView x:Name="lvNbComposantParMedicament">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding LibelleMedicament}" HorizontalTextAlignment="Center"></Label>
+                                    <Label WidthRequest="100" Text="{Binding NbComposants}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Le médicament ayant le minimum de composant est : "></Label>
+            <ListView x:Name="lvMedicamentMinimumComposant">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding LibelleMedicament}" HorizontalTextAlignment="Center"></Label>
+                                    <Label WidthRequest="100" Text="{Binding MinimumComposant}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Le médicament ayant le maximum de composant est : "></Label>
+            <ListView x:Name="lvMedicamentMaximumComposant">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding LibelleMedicament}" HorizontalTextAlignment="Center"></Label>
+                                    <Label WidthRequest="100" Text="{Binding MaximumComposant}"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Button x:Name="btnRetourAcceuil" Text="Retour à la page d'acceuil" Clicked="BtnRetourAcceuil_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
