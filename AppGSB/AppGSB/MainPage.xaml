@@ -11,6 +11,8 @@
         <Button Text="Gérer les médicaments" x:Name="btnGestionMedicaments" Clicked="BtnGestionMedicaments_Clicked"></Button>
         <Button Text="Gérer les formulation des médicaments" x:Name="btnGestionFormulation" Clicked="BtnGestionFormulation_Clicked"></Button>
         <Button Text="Statistiques" x:Name="btnStatistiques" Clicked="BtnStatistiques_Clicked"></Button>
+
+        <Button Text="Incompatibilité des médicaments" x:Name="btnIncompatibilites" Clicked="BtnIncompatibilites_Clicked" IsVisible="False"></Button>
     </StackLayout>
 
 </ContentPage>

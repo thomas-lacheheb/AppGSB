@@ -16,7 +16,7 @@ namespace AppGSB
         {
             InitializeComponent();
             GstWS = new GstWebServices();
-            // LocalHost = "http://localhost/bts2/WSGSB/";
+            LocalHost = "http://localhost/bts2/WSGSB/";
             LocalHost = "http://thomas.sio19ingetis.lan/PPE4_GSB/WSGSB/";
 
             MainPage = new MainPage();

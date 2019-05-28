@@ -118,5 +118,19 @@ namespace AppGSB.ClassesMetier
             List<MaximumComposantsDesMedicaments> leMedicamentAvecMaximumComposant = JsonConvert.DeserializeObject<List<MaximumComposantsDesMedicaments>>(reponse);
             return leMedicamentAvecMaximumComposant;
         }
+
+        public async Task<List<Medicament>> GetListMedicamentsPourIncompatibilite()
+        {
+            reponse = await ws.GetStringAsync(App.LocalHost + "ListeMedicamentsPourIncompatibilite.php");
+            List<Medicament> lesMedicaments = JsonConvert.DeserializeObject<List<Medicament>>(reponse);
+            return lesMedicaments;
+        }
+
+        public async Task<List<Incompatibilite>> GetIncompatibiliteMedicament(string IdMedicament)
+        {
+            reponse = await ws.GetStringAsync(App.LocalHost + "IncompatibiliteDuMedicament.php?IdMedicament=" + IdMedicament);
+            List<Incompatibilite> lesIncompatibilitesDuMedicament = JsonConvert.DeserializeObject<List<Incompatibilite>>(reponse);
+            return lesIncompatibilitesDuMedicament;
+        }
     }
 }

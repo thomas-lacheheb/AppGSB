@@ -37,5 +37,11 @@ namespace AppGSB
             Pages.PageStatistiques page = new Pages.PageStatistiques();
             await Navigation.PushModalAsync(page);
         }
+
+        private async void BtnIncompatibilites_Clicked(object sender, EventArgs e)
+        {
+            Pages.PageMedicamentPourIncompatibilite page = new Pages.PageMedicamentPourIncompatibilite();
+            await Navigation.PushModalAsync(page);
+        }
     }
 }

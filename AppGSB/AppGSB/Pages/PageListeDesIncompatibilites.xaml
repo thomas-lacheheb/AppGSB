@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppGSB.Pages.PageListeDesIncompatibilites">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvIncompatibilite" HorizontalOptions="Center" WidthRequest="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label WidthRequest="100" Text="{Binding IdMedicament}" HorizontalTextAlignment="Center"></Label>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Retour" x:Name="btnRetour" Clicked="BtnRetour_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
